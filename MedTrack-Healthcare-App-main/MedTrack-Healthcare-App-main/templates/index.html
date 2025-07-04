@@ -1,0 +1,216 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8 max-w-7xl">
+    <!-- Hero Section -->
+    <section class="relative hero-section text-white rounded-2xl shadow-xl overflow-hidden mb-12" data-aos="fade-up" data-aos-duration="1000">
+        <div class="absolute inset-0 bg-pattern opacity-10"></div>
+        <div class="relative py-16 px-6 text-center md:text-left md:flex md:items-center md:justify-between">
+            <div class="md:w-1/2">
+                <h1 class="hero-title">Welcome to MedTrack</h1>
+                <p class="hero-description">Your trusted platform for seamless healthcare management. Connect with doctors, book appointments, and access your health records effortlessly.</p>
+                <div class="hero-buttons">
+                    <a href="{{ url_for('login') }}" class="btn btn-primary" data-aos="fade-right" data-aos-delay="200">Login</a>
+                    <a href="{{ url_for('register') }}" class="btn btn-outline-light" data-aos="fade-left" data-aos-delay="300">Register</a>
+                </div>
+            </div>
+            <div class="hidden md:block md:w-1/2">
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="mb-12">
+        <h2 class="section-title text-center mb-8">Why Choose MedTrack?</h2>
+        <div class="features-grid">
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                <h3 class="feature-title mb-2">Find Doctors</h3>
+                <p class="feature-description">Discover and connect with top healthcare professionals across various specialties.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                <h3 class="feature-title mb-2">Easy Appointments</h3>
+                <p class="feature-description">Schedule and manage appointments with ease, directly from your dashboard.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                <h3 class="feature-title mb-2">Digital Records</h3>
+                <p class="feature-description">Securely access your medical history, prescriptions, and diagnoses anytime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works shadow-md" data-aos="fade-up" data-aos-delay="500">
+        <h2 class="section-title text-center mb-6">How It Works</h2>
+        <div class="steps-container">
+            <div class="step">
+                <span class="step-number">1</span>
+                <p class="step-description">Sign up as a patient or doctor with a quick and secure registration process.</p>
+            </div>
+            <div class="step">
+                <span class="step-number">2</span>
+                <p class="step-description">Access your personalized dashboard to manage your healthcare needs.</p>
+            </div>
+            <div class="step">
+                <span class="step-number">3</span>
+                <p class="step-description">Patients can search for doctors and book Appointments instantly.</p>
+            </div>
+            <div class="step">
+                <span class="step-number">4</span>
+                <p class="step-description">Doctors can manage appointments and provide digital diagnoses efficiently.</p>
+            </div>
+            <div class="step">
+                <span class="step-number">5</span>
+                <p class="step-description">Stay updated with email notifications for appointment confirmations and updates.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<style>
+    .hero-section {
+        background: linear-gradient(to right, #26a69a, #1e7e75) !important;
+    }
+    .hero-title {
+        font-size: 2.25rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+    @media (min-width: 768px) {
+        .hero-title {
+            font-size: 3rem;
+        }
+    }
+    .hero-description {
+        font-size: 1.125rem;
+        margin-bottom: 1.5rem;
+    }
+    @media (min-width: 768px) {
+        .hero-description {
+            font-size: 1.25rem;
+        }
+    }
+    .hero-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+    @media (min-width: 768px) {
+        .hero-buttons {
+            justify-content: flex-start;
+        }
+    }
+    .btn-primary {
+        background-color: #26a69a !important;
+        border-color: #26a69a !important;
+        transition: background-color 0.2s, border-color 0.2s;
+    }
+    .btn-primary:hover, .btn-primary:focus {
+        background-color: #1e7e75 !important;
+        border-color: #1a6c63 !important;
+    }
+    .btn-outline-light:hover, .btn-outline-light:focus {
+        background-color: #fff;
+        color: #26a69a;
+    }
+
+    .section-title {
+        font-size: 1.875rem;
+        font-weight: 700;
+        color: #212529;
+    }
+    .features-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+        .features-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    .feature-card {
+        background-color: white;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        transition: box-shadow 0.3s;
+    }
+    .feature-card:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    .feature-icon {
+        width: 3rem;
+        height: 3rem;
+        color: #26a69a;
+        margin-bottom: 1rem;
+    }
+    .feature-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #212529;
+        margin-bottom: 0.5rem;
+    }
+    .feature-description {
+        color: #6c757d;
+    }
+
+    .how-it-works {
+        background-color: #f3f4f6;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    .steps-container {
+        max-width: 32rem;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .step {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .step-number {
+        background-color: #26a69a;
+        color: white;
+        border-radius: 9999px;
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+    }
+    .step-description {
+        color: #374151;
+    }
+
+    .bg-pattern {
+        background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20z'/%3E%3Cpath d='M40 40H20L40 20z'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    @media (max-width: 768px) {
+        h1, h2, h3 {
+            font-size: 1.25rem;
+        }
+    }
+</style>
+
+<!-- AOS Animation CDN -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        once: true
+    });
+</script>
+{% endblock %}
